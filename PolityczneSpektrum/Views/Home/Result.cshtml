@@ -1,0 +1,44 @@
+﻿@model List<Question>
+<div style="margin-left: 300px;">
+    <p style="color: red;">Todo: INNY WYKRES mozna kolory pozmmieniac i zrobic go troche wiekszego + punktacja na podstawie odp None = 0pkt +
+    Jakis sensowny tekst + obrazki, np gdzie byl by hitler, stalin i inni </p>
+    <h1>Gratulacje! Twój wynik to:</h1>
+    <img src="~/Imgs/crowdchart.png" />
+</div>
+
+@for (int i = 0; i < Model.Count(); i++)
+{
+
+
+<div class="card panel-default" style="margin-top: 30px;">
+    <strong style="padding:10px;">@Model[i].Id</strong>
+    <div class="card-body">
+        @Model[i].Content
+        
+        <strong><br />Odp: @Model[i].Answer</strong>
+    </div>
+
+</div>
+}
+
+<p>
+    Lorem ipsum dolor sit amet, mel rebum nominavi no. Vel vidit vituperata ne. Nibh dolores scriptorem qui cu, ea oblique sensibus pro, docendi singulis electram mel ne. Per quot magna vituperatoribus ad. Mei in commodo docendi omittam, ne sea maiorum nusquam deserunt.
+
+    Habeo evertitur necessitatibus id nam. Ut mucius offendit nec, odio mazim deterruisset nec ad. No vix novum dissentias consectetuer, eu erant dolor percipit eum. At labores neglegentur pri. Vitae consul comprehensam eu sed.
+
+    Nam ex minim error timeam, sed essent nominati et. Offendit laboramus eum ad. Quaeque disputando an ius, id quo prompta placerat. In sea eius utroque habemus. Id inermis honestatis consequuntur nec, eam dicam indoctum deseruisse ad. Ne pro elaboraret omittantur deterruisset, ad vim posse impetus.
+
+    Eos iuvaret dignissim at. Oblique recteque adipiscing ut mei, nam quando democritum in, mel cu nemore salutatus. At mea scripta nusquam forensibus. No error labore definitiones qui, soleat facilisi definiebas eum ea, enim iuvaret feugiat ei cum. Pri eu mundi dicam phaedrum, eam in sadipscing reprehendunt, ex audiam epicurei pro. Vel ei nemore vocent assentior, causae nostrum appellantur eum ei.
+
+    An hinc everti eam. Cu aperiam appareat interpretaris mei, vidit minim assueverit vis no, ius ut ponderum luptatum torquatos. Ut quo mazim euismod antiopam, iisque splendide an est. Nec in sint causae aeterno, mel erat numquam id, usu modus vitae persequeris eu. Pro te nobis quidam, dicant virtute dignissim mei ex, animal partiendo mediocritatem ea sed. Eos no regione sadipscing.
+
+    Pro ne nulla postea, labore numquam intellegam vis in, nominati iracundia eos ad. Ut pri posse nostrum, ex tale omittam sed. An nam mazim saepe consequuntur. Mnesarchum voluptatum vituperata cu has, usu ea inani invidunt. Fugit percipit pri ea, volumus concludaturque ex usu. Dicant possit dictas ei eos, ad nec veniam tacimates ullamcorper.
+
+    Velit euripidis vis ut, sed id graeci quaestio, regione lucilius eu duo. An duo quod aliquip, ut corrumpit consetetur quo. Quo dolorem senserit ei, ubique essent assueverit in vim. Elit magna liber cu sit, ad admodum facilisis scripserit his. Nibh deterruisset ei sed, an est solum fugit consetetur, vitae animal minimum ius ne. Vim et cibo nemore offendit, est vocent praesent splendide ex.
+
+    Zril commune deseruisse per ad, eam enim antiopam scriptorem at. Quo ad soleat voluptua cotidieque. At dicta iracundia vix, ne vis fuisset noluisse mnesarchum. Homero laudem quaerendum cum eu. Quo ne meliore volumus, quo in accusata consectetuer.
+
+    Mentitum assueverit cu quo, eam te dicit complectitur. Vix no debet contentiones. Est in erat alterum, fugit prompta denique sed ex, mei id veri nullam. Nisl deserunt sadipscing mei ad. Oratio munere aperiam et his, duo summo timeam patrioque at. Pertinacia concludaturque nam ne, omnesque patrioque sed ut, assum cetero ne per. Recteque iracundia at sea, simul iudico mei id.
+
+    Eam ferri laboramus maiestatis ex, usu an ullum invidunt. Te vis sint laudem populo, ut meis tibique pro, no eum solet omnesque menandri. Enim corpora nec et, labore meliore his in. Ex nam iudicabit persecuti, ne quo officiis elaboraret.
+</p>

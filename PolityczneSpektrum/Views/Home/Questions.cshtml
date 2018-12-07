@@ -1,0 +1,74 @@
+﻿
+@model ReflectionIT.Mvc.Paging.PagingList<Question>
+@addTagHelper *,ReflectionIT.Mvc.Paging
+
+
+@addTagHelper *, ReflectionIt.Mvc.Paging
+
+@{
+    ViewBag.Title = "Home page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Oto zestaw pytań:</h2>
+<p style="color: red;">Todo: Wprowadzic poprawne pytania po polsku do bazy danych bo tu sa randomowe</p>
+
+@*<nav aria-label="Questions">
+    @await this.Component.InvokeAsync("Pager", new
+{
+    pagingList = this.Model
+})
+</nav>*@
+
+
+
+@*<nav aria-label="Suppliers navigation example">
+    <vc:pager paging-list="@Model"/>
+</nav>*@
+
+
+
+
+<form asp-action="Questions" method="post" asp-controller="Home">
+    @for (int i = 0; i < Model.Count(); i++)
+    {
+
+
+        <div class="card panel-default form-group" style="margin-top: 30px;">
+            <strong style="padding:10px;">@Model[i].Id</strong>
+            <div class="card-body">
+                @Model[i].Content
+            </div>
+            <div>
+                <select required class="form-control" asp-for="@Model[i].Answer" asp-items="@Html.GetEnumSelectList<Answer>()"></select>
+                @*<input asp-for="@Model[i].Answer" type="radio" value="@Answer.SDisagree" required/>Zupelnie sie nie zgadzam
+                    <input asp-for="@Model[i].Answer" type="radio" value="@Answer.Disagree" required/>Nie zgadzam sie
+                    <input asp-for="@Model[i].Answer" type="radio" value="@Answer.Agree" required/>Zgadzam sie
+                    <input asp-for="@Model[i].Answer" type="radio" value="@Answer.SAgree" required/>Calkowicie sie zgadzam*@
+
+
+                <span asp-validation-for="@Model[i].Answer" class="text-danger"></span>
+            </div>
+        </div>
+    }
+
+
+    @if (Model.PageIndex < 4)
+    {
+        <button type="submit" class="btn btn-primary btn-lg btn-block" role="button">Dalej</button>
+    }
+    else
+    {
+        <button type="submit" class="btn btn-success btn-lg btn-block">Gotowe!</button>
+    }
+
+
+
+
+    <hr />
+
+
+</form>
+
+
+
